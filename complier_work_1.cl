@@ -48,7 +48,7 @@ class Main inherits IO {
                 root.setLeft(n2);
                 root.setRight(n3);
                 n2.setLeft(n4);
-                root.inorder(self);   -- self 就是 io
+                root.inorder(self);   
                 self;
             }
     };
