@@ -1,3 +1,4 @@
+--节点
 class Node {
     value : Int;
     left  : Node;
@@ -6,12 +7,10 @@ class Node {
     init(v : Int) : Node {
         {
             value <- v;
-            -- COOL 没有 null，不赋值就是 void（空引用）
-            -- 留空即可
             self;
         }
     };
-
+--插入方法
     setLeft(l : Node) : Node {
         {
             left <- l;
@@ -26,7 +25,7 @@ class Node {
         }
     };
 
-    -- 中序遍历，io 是全局 IO 实例
+    -- 中序遍历
     inorder(io : IO) : Object {
         {
             if (isvoid left) then 0 else left.inorder(io) fi;
@@ -36,7 +35,7 @@ class Node {
         }
     };
 };
-
+--构造和测试
 class Main inherits IO {
     main() : Object {
         let
